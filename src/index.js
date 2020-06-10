@@ -1,6 +1,5 @@
 import validator from './validator.js';
 
-
 const tarjeta = document.querySelector('#tarjeta'),
 	  btnAbrirFormulario = document.querySelector('#btn-abrir-formulario'),
 	  formulario = document.querySelector('#formulario-tarjeta'),
@@ -9,7 +8,7 @@ const tarjeta = document.querySelector('#tarjeta'),
 	  logoMarca = document.querySelector('#logo-marca'),
 	  firma = document.querySelector('#tarjeta .firma p'),
 	  mesExpiracion = document.querySelector('#tarjeta .mes'),
-	  yearExpiracion = document.querySelector('#tarjeta .year');
+	  yearExpiracion = document.querySelector('#tarjeta .year'),
 	  ccv = document.querySelector('#tarjeta .ccv');
 
 // * Volteamos la tarjeta para mostrar el frente.
@@ -42,7 +41,7 @@ for(let i = 1; i <= 12; i++){
 const yearActual = new Date().getFullYear();
 for(let i = yearActual; i <= yearActual + 8; i++){
 	let opcion = document.createElement('option');
-	opcion.value = i;
+	opcion.value = i;o 
 	opcion.innerText = i;
 	formulario.selectYear.appendChild(opcion);
 }
@@ -69,9 +68,12 @@ formulario.inputNumero.addEventListener('keyup', (e) => {
 		logoMarca.innerHTML = '';
 	}
 
-	if(valorInput[0] == 4){
+	 else if(valorInput[0] == 4){
+        console.log(valorInput[0] == 4);
+        
 		logoMarca.innerHTML = '';
-		const imagen = document.createElement('img');
+        const imagen = document.createElement('img');
+        console.log(logoMarca,imagen)
 		imagen.src = 'img/logos/visa.png';
 		logoMarca.appendChild(imagen);
 	} else if(valorInput[0] == 5){
