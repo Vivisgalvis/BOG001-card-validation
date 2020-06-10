@@ -1,6 +1,6 @@
-import validator from './validator.js';
+/*import validator from './validator.js';*/
 
-console.log(validator);
+
 const tarjeta = document.querySelector('#tarjeta'),
 	  btnAbrirFormulario = document.querySelector('#btn-abrir-formulario'),
 	  formulario = document.querySelector('#formulario-tarjeta'),
@@ -46,3 +46,4 @@ for(let i = yearActual; i <= yearActual + 8; i++){
 	opcion.innerText = i;
 	formulario.selectYear.appendChild(opcion);
 }
+/*console.log(validator);*/
