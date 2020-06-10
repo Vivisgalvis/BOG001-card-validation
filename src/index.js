@@ -1,4 +1,4 @@
-/*import validator from './validator.js';*/
+import validator from './validator.js';
 
 
 const tarjeta = document.querySelector('#tarjeta'),
@@ -46,4 +46,83 @@ for(let i = yearActual; i <= yearActual + 8; i++){
 	opcion.innerText = i;
 	formulario.selectYear.appendChild(opcion);
 }
-/*console.log(validator);*/
+
+// * Input numero de tarjeta
+formulario.inputNumero.addEventListener('keyup', (e) => {
+	let valorInput = e.target.value;
+
+	formulario.inputNumero.value = valorInput
+	// Eliminamos espacios en blanco
+	.replace(/\s/g, '')
+	// Eliminar las letras
+	.replace(/\D/g, '')
+	// Ponemos espacio cada cuatro numeros
+	.replace(/([0-9]{4})/g, '$1 ')
+	// Elimina el ultimo espaciado
+	.trim();
+
+	numeroTarjeta.textContent = valorInput;
+
+	if(valorInput == ''){
+		numeroTarjeta.textContent = '#### #### #### ####';
+
+		logoMarca.innerHTML = '';
+	}
+
+	if(valorInput[0] == 4){
+		logoMarca.innerHTML = '';
+		const imagen = document.createElement('img');
+		imagen.src = 'img/logos/visa.png';
+		logoMarca.appendChild(imagen);
+	} else if(valorInput[0] == 5){
+		logoMarca.innerHTML = '';
+		const imagen = document.createElement('img');
+		imagen.src = 'img/logos/mastercard.png';
+		logoMarca.appendChild(imagen);
+	}
+
+	// Volteamos la tarjeta para que el usuario vea el frente.
+	mostrarFrente();
+});
+
+// * Input nombre de tarjeta
+formulario.inputNombre.addEventListener('keyup', (e) => {
+	let valorInput = e.target.value;
+
+	formulario.inputNombre.value = valorInput.replace(/[0-9]/g, '');
+	nombreTarjeta.textContent = valorInput;
+	firma.textContent = valorInput;
+
+	if(valorInput == ''){
+		nombreTarjeta.textContent = 'Carlos Perez';
+	}
+
+	mostrarFrente();
+});
+
+// * Select mes
+formulario.selectMes.addEventListener('change', (e) => {
+	mesExpiracion.textContent = e.target.value;
+	mostrarFrente();
+});
+
+// * Select Año
+formulario.selectYear.addEventListener('change', (e) => {
+	yearExpiracion.textContent = e.target.value.slice(2);
+	mostrarFrente();
+});
+
+// * CCV
+formulario.inputCCV.addEventListener('keyup', () => {
+	if(!tarjeta.classList.contains('active')){
+		tarjeta.classList.toggle('active');
+	}
+
+	formulario.inputCCV.value = formulario.inputCCV.value
+	// Eliminar los espacios
+	.replace(/\s/g, '')
+	// Eliminar las letras
+	.replace(/\D/g, '');
+
+	ccv.textContent = formulario.inputCCV.value;
+});

@@ -16,12 +16,16 @@ Por medio de está aplicacíon deseamos darle facilidades de consultar su cupo, 
 
 1. Explicar quiénes son los usuarios.
 
-  Los usarios son todos nuestros clientes que tienen productos activos en nuestro banco, con el objetivo de hacer mucho
-
+  Los usarios son todos nuestros clientes que tienen productos activos en nuestro banco, con el objetivo facilitar a nuestros clientes la consulta de sus movimientos, extractos, cupo, etc.
 
 2. Explicar cómo el producto soluciona los problemas/necesidades de dichos
-    usuarios.
+  usuarios.
+
+
+
   3. Luego colocarás la foto de tu primer prototipo en papel.
+
+  
   4. Agregar un resumen del feedback recibido indicando las mejoras a realizar.
   5. Imagen del prototipo final.
 

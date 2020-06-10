@@ -25,8 +25,6 @@ const validator = {
      alert("El número de tarjeta no es válido");
     }
    }
-    
-
-};
+    };
 
 export default validator;
