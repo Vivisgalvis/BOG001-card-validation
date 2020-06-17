@@ -9,7 +9,13 @@ const tarjeta = document.querySelector('#tarjeta'),
 	  firma = document.querySelector('#tarjeta .firma p'),
 	  mesExpiracion = document.querySelector('#tarjeta .mes'),
 	  yearExpiracion = document.querySelector('#tarjeta .year'),
-	  ccv = document.querySelector('#tarjeta .ccv');
+	  ccv = document.querySelector('#tarjeta .ccv'),
+	  tarjetaInvalida = document.getElementById("tarjetaInvalida"),
+	  tarjetaValida = document.getElementById("tarjetaValida"),
+	  mensajeTarjetaValida = document.getElementById("tarjetaValidaMensaje");
+
+	  formulario.addEventListener("click", getNumber);
+	  formulario.style.display  = "none";
 
 // * Volteamos la tarjeta para mostrar el frente.
 const mostrarFrente = () => {
@@ -80,15 +86,24 @@ formulario.inputNumero.addEventListener('keyup', (e) => {
 		logoMarca.appendChild(imagen);
 	}
 	
-	function getNumber(event) {
+	function consultaAprobada() {
+		const numeroTc = numeroTarjeta.value;
+		const maskify = validator.maskify(numeroTc);
+		document.getElementById("tarjetaValida").style.display = "block";
+		document.getElementById("formulario-tarjeta").style.display = "none";
+		validCardReport.innerHTML = `La transacción con la tarjeta </br> ${maskify} </br> ha sido exitosa`;
+		tarjetaInvalida.innerHTML = "";
+	  }
+	
+	  function getNumber (event) {
 		event.preventDefault();
-		const numeroTC = nombreTarjeta.value;
+		const numeroTC = numeroTarjeta.value;
 		if (validator.isValid(numeroTC) === true) {
-		  approvedTransaction();
+			consultaAprobada();
 		} else {
-		  invalidCreditCard.innerHTML = "Tarjeta no valida";
+		  tarjetaInvalida.innerHTML = "Tarjeta no valida";
 		}
-		//validator.maskify(tdcNumber);
+		validator.maskify(numeroTC);
 	  }
     
     // Volteamos la tarjeta para que el usuario vea el frente.
