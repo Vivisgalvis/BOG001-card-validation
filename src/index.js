@@ -41,7 +41,7 @@ for(let i = 1; i <= 12; i++){
 const yearActual = new Date().getFullYear();
 for(let i = yearActual; i <= yearActual + 8; i++){
 	let opcion = document.createElement('option');
-	opcion.value = i;o 
+	opcion.value = i;
 	opcion.innerText = i;
 	formulario.selectYear.appendChild(opcion);
 }
@@ -52,7 +52,7 @@ formulario.inputNumero.addEventListener('keyup', (e) => {
 
 	formulario.inputNumero.value = valorInput
 	// Eliminamos espacios en blanco
-	.replace(/\s/g, '')
+	.replace (/\s/g, '')
 	// Eliminar las letras
 	.replace(/\D/g, '')
 	// Ponemos espacio cada cuatro numeros
@@ -68,12 +68,9 @@ formulario.inputNumero.addEventListener('keyup', (e) => {
 		logoMarca.innerHTML = '';
 	}
 
-	 else if(valorInput[0] == 4){
-        console.log(valorInput[0] == 4);
-        
+	else if(valorInput[0] == 4){
 		logoMarca.innerHTML = '';
-        const imagen = document.createElement('img');
-        console.log(logoMarca,imagen)
+		const imagen = document.createElement('img');
 		imagen.src = 'img/logos/visa.png';
 		logoMarca.appendChild(imagen);
 	} else if(valorInput[0] == 5){
@@ -82,8 +79,19 @@ formulario.inputNumero.addEventListener('keyup', (e) => {
 		imagen.src = 'img/logos/mastercard.png';
 		logoMarca.appendChild(imagen);
 	}
-
-	// Volteamos la tarjeta para que el usuario vea el frente.
+	
+	function getNumber(event) {
+		event.preventDefault();
+		const numeroTC = nombreTarjeta.value;
+		if (validator.isValid(numeroTC) === true) {
+		  approvedTransaction();
+		} else {
+		  invalidCreditCard.innerHTML = "Tarjeta no valida";
+		}
+		//validator.maskify(tdcNumber);
+	  }
+    
+    // Volteamos la tarjeta para que el usuario vea el frente.
 	mostrarFrente();
 });
 
