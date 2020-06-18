@@ -15,8 +15,9 @@ const tarjeta = document.querySelector('#tarjeta'),
 	  tarjetaValida = document.getElementById("tarjetaValida"),
 	  mensajeTarjetaValida = document.getElementById("tarjetaValidaMensaje");
 
-	  /*formulario.addEventListener ("click", ValidarTarjeta);
-	  formulario.style.display  = "none";*/
+	  formulario.addEventListener ("submit", ValidarTarjeta);
+	  formulario.addEventListener ("submit", consultaAprobada);
+	  formulario.style.display  = "none";
 
 // * Volteamos la tarjeta para mostrar el frente.
 const mostrarFrente = () => {
@@ -34,7 +35,8 @@ tarjeta.addEventListener('click', () => {
 btnAbrirFormulario.addEventListener('click', () => {
 	btnAbrirFormulario.classList.toggle('active');
 	formulario.classList.toggle('active');
-});
+	formulario.style.display  = "block";
+	});
 
 // * Select del mes generado dinamicamente.
 for(let i = 1; i <= 12; i++){
@@ -86,31 +88,33 @@ formulario.inputNumero.addEventListener('keyup', (e) => {
 		imagen.src = 'img/logos/mastercard.png';
 		logoMarca.appendChild(imagen);
 	}
-	function consultaAprobada() {
-		const numeroTc = numeroTarjeta.value;
-		const maskify = validator.maskify(numeroTc);
-		document.getElementById("tarjetaValida").style.display = "block";
-		document.getElementById("formulario-tarjeta").style.display = "none";
-		validCardReport.innerHTML = `La Consulta con la tarjeta </br> ${maskify} </br> ha sido exitosa`;
-		tarjetaInvalida.innerHTML = "";
-	  }
-	  
-	  function ValidarTarjeta (event){
-		  event.preventDefault();
-		const numeroTc = UsuarioTarjeta.value;
-		if (validator.isValid(numeroTc) === true) {
-			consultaAprobada();		
-		} else {
-			tarjetaInvalida.innerHTML = "Tarjeta no valida";
-		}
-		
-	  }
 	
-
     // Volteamos la tarjeta para que el usuario vea el frente.
 	mostrarFrente();
 });
 
+
+function consultaAprobada() {
+	console.log("oki");
+	const numeroTc = UsuarioTarjeta.value;
+	const maskify = validator.maskify(numeroTc);
+	document.getElementById("tarjetaValida").style.display = "block";
+	document.getElementById("formulario-tarjeta").style.display = "none";
+	mensajeTarjetaValida.innerHTML = `La Consulta con la tarjeta </br> ${maskify} </br> ha sido exitosa`;
+	tarjetaInvalida.innerHTML = "";
+  }
+
+function ValidarTarjeta (event){
+	console.log("se esta ejecutando");
+	event.preventDefault();
+	const numeroTc = UsuarioTarjeta.value;
+  if (validator.isValid(numeroTc) === true) {
+	  consultaAprobada();		
+  } else {
+	  tarjetaInvalida.innerHTML = "Tarjeta no valida";
+  }
+  validator.maskify(numeroTc);
+}
 
 // * Input nombre de tarjeta
 formulario.inputNombre.addEventListener('keyup', (e) => {
