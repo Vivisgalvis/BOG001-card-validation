@@ -1,7 +1,5 @@
 BANK MAVI
 
-https://raw.githubusercontent.com//Vivisgalvis/BOG001-card-validation/master/src/img/vista_3-jpg
-
 ## Índice
 
 * [1. Descripción del proyecto](#1-Descripción-del-proyecto)
