@@ -1,6 +1,6 @@
 BANK MAVI
 
-img: vista_3.png;
+https://raw.githubusercontent.com//Vivisgalvis/BOG001-card-validation/master/src/img/vista_3-jpg
 
 ## Índice
 
