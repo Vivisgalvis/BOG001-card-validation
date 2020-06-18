@@ -24,7 +24,24 @@ const validator = {
     } else {
       return false;
     }
-   }
+   },
+   maskify: function(num2) {
+    let numeros2 = num2.split("").reverse();
+    let maskReversed = "";
+   
+    for (let i = 0; i < numeros2.length; i++) {
+      if (i < 4) {
+        maskReversed = maskReversed + numeros2[i];
+      } else {
+        maskReversed = maskReversed + "*";
+      }
+    }
+    let mask = "";
+    for (let i = maskReversed.length - 1; i >= 0; i--) {
+      mask = mask + maskReversed[i];
+    }
+    return mask;
+  },
     };
 
 export default validator;

@@ -1,5 +1,7 @@
 BANK MAVI
 
+img: vista_3.png;
+
 ## Índice
 
 * [1. Descripción del proyecto](#1-Descripción-del-proyecto)

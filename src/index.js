@@ -10,12 +10,13 @@ const tarjeta = document.querySelector('#tarjeta'),
 	  mesExpiracion = document.querySelector('#tarjeta .mes'),
 	  yearExpiracion = document.querySelector('#tarjeta .year'),
 	  ccv = document.querySelector('#tarjeta .ccv'),
+	  UsuarioTarjeta = document.getElementById("inputNumero"),
 	  tarjetaInvalida = document.getElementById("tarjetaInvalida"),
 	  tarjetaValida = document.getElementById("tarjetaValida"),
 	  mensajeTarjetaValida = document.getElementById("tarjetaValidaMensaje");
 
-	  formulario.addEventListener("click", getNumber);
-	  formulario.style.display  = "none";
+	  /*formulario.addEventListener ("click", ValidarTarjeta);
+	  formulario.style.display  = "none";*/
 
 // * Volteamos la tarjeta para mostrar el frente.
 const mostrarFrente = () => {
@@ -85,30 +86,31 @@ formulario.inputNumero.addEventListener('keyup', (e) => {
 		imagen.src = 'img/logos/mastercard.png';
 		logoMarca.appendChild(imagen);
 	}
-	
 	function consultaAprobada() {
 		const numeroTc = numeroTarjeta.value;
 		const maskify = validator.maskify(numeroTc);
 		document.getElementById("tarjetaValida").style.display = "block";
 		document.getElementById("formulario-tarjeta").style.display = "none";
-		validCardReport.innerHTML = `La transacción con la tarjeta </br> ${maskify} </br> ha sido exitosa`;
+		validCardReport.innerHTML = `La Consulta con la tarjeta </br> ${maskify} </br> ha sido exitosa`;
 		tarjetaInvalida.innerHTML = "";
 	  }
-	
-	  function getNumber (event) {
-		event.preventDefault();
-		const numeroTC = numeroTarjeta.value;
-		if (validator.isValid(numeroTC) === true) {
-			consultaAprobada();
+	  
+	  function ValidarTarjeta (event){
+		  event.preventDefault();
+		const numeroTc = UsuarioTarjeta.value;
+		if (validator.isValid(numeroTc) === true) {
+			consultaAprobada();		
 		} else {
-		  tarjetaInvalida.innerHTML = "Tarjeta no valida";
+			tarjetaInvalida.innerHTML = "Tarjeta no valida";
 		}
-		validator.maskify(numeroTC);
+		
 	  }
-    
+	
+
     // Volteamos la tarjeta para que el usuario vea el frente.
 	mostrarFrente();
 });
+
 
 // * Input nombre de tarjeta
 formulario.inputNombre.addEventListener('keyup', (e) => {
