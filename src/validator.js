@@ -21,7 +21,7 @@ const validator = {
     for (var i=1; i < longitud; i+=2){
       suma += parseInt(cadena.charAt(i));
     }
-     console.log("entra al if de la division para validar si es valida")  
+     console.log("entra al if de la division para hacer validacion")  
     if ((suma % 10) === 0){ 
      alert("Número de tarjeta correcto");
     } else {
