@@ -1,6 +1,6 @@
 BANK MAVI
 
-img: vista_3.png;
+<img src="img/vista_3.jpg">
 
 ## Índice
 

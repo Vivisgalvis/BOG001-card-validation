@@ -100,7 +100,7 @@ function consultaAprobada() {
 	const maskify = validator.maskify(numeroTc);
 	document.getElementById("tarjetaValida").style.display = "block";
 	document.getElementById("formulario-tarjeta").style.display = "none";
-	mensajeTarjetaValida.innerHTML = `La Consulta con la tarjeta </br> ${maskify} </br> ha sido exitosa`;
+	mensajeTarjetaValida.innerHTML = `La Consulta con la tarjeta </br> ${maskify} </br> se ha realizado`;
 	tarjetaInvalida.innerHTML = "";
   }
 
