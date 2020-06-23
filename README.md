@@ -1,6 +1,6 @@
 
 BANCO MAVI💳 
-<img src =src/img/vista_5.png>
+<img src =src/img/vista_3.png>
 
 ## Índice
 
