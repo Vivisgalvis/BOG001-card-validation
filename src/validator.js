@@ -1,31 +1,34 @@
 const validator = {
   isValid : function ValidarTJ(numero_tarjeta) {
-    var cadena = numero_tarjeta.toString();
+    var cadena = numero_tarjeta.toString().replace(/\s+/g, "");
     var longitud = cadena.length;
     var cifra = null;
     var cifra_cad=null;
     var suma=0;
-    
-    console.log("Entra al for de validar longitud")
-    for (var i=0; i < longitud; i+=2){
-      cifra = parseInt(cadena.charAt(i))*2;
-      console.log("entra al if menor a 9")
+    //1: guardar cadena en el sentido contrario
+    var array_num = cadena.split("").reverse();
+
+    // 2. impares dejarlos igual, pares multiplicarlos por 2
+  
+    for (var i=0; i < longitud; i++){
+      cifra = parseInt(array_num[i]);
+      if ((i + 1) % 2 == 0){
+        cifra = cifra * 2;
+      }
+      //console.log("entra al if menor a 9")
       if (cifra > 9){ 
         cifra_cad = cifra.toString();
         cifra = parseInt(cifra_cad.charAt(0)) + 
         parseInt(cifra_cad.charAt(1));
-      }
+      } 
+      console.log("posicion: " + (i + 1) + "- número : " + array_num[i] + "- resultado: " + cifra);
       suma+=cifra;
     }
-    console.log("entra al for de suma")
-    for (var i=1; i < longitud; i+=2){
-      suma += parseInt(cadena.charAt(i));
-    }
-     console.log("entra al if de la division para hacer validacion")  
+    
     if ((suma % 10) === 0){ 
-     alert("Número de tarjeta correcto");
+     alert("Número de tarjeta correcto ");
     } else {
-     alert("El número de tarjeta no es válido");
+     alert("El número de tarjeta no es válido ");
     }
    },
 

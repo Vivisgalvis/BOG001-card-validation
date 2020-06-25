@@ -1,4 +1,6 @@
-* {
+*
+
+{
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
@@ -17,6 +19,28 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+
+.primera-pagina{
+	height: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url(img/FondoBanco.png);
+  background-size: cover;
+}
+
+.usario-container{
+	width: 100%;
+	max-width: 700px;
+	top: 150px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	margin-bottom: 20px;
+	justify-content: center;
 }
 
 /* ---------- Estilos Generales de las Tarjetas ----------*/
@@ -288,4 +312,33 @@ body {
 
 .formulario-tarjeta .btn-enviar:hover {
 	background: #1850b1;
+}
+footer{
+	width:100%;
+	height: 100px;
+	position: relative;
+	bottom: 0;
+	box-shadow: 0 -1px 10px 0 #000012;
+}
+.derechosReservados{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.derechosReservados p{
+	color: #2364d2;
+	font-size: 15px;
+	text-decoration: none;
+	margin: 30px;
+	padding: 16px 16px;
+	align-items: initial;
+}
+
+
+.logoBanco img{
+	/*margin: 80px;
+	width: 80px;
+	height: 80px;*/
+	justify-content: flex-end;
+	align-items: flex-start;
 }

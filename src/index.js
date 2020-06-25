@@ -1,4 +1,5 @@
 import validator from './validator.js';
+console.log(validator);
 
 const tarjeta = document.querySelector('#tarjeta'),
 	  btnAbrirFormulario = document.querySelector('#btn-abrir-formulario'),
@@ -13,12 +14,29 @@ const tarjeta = document.querySelector('#tarjeta'),
 	  UsuarioTarjeta = document.getElementById("inputNumero"),
 	  tarjetaInvalida = document.getElementById("tarjetaInvalida"),
 	  tarjetaValida = document.getElementById("tarjetaValida"),
-	  mensajeTarjetaValida = document.getElementById("tarjetaValidaMensaje");
+	  mensajeTarjetaValida = document.getElementById("tarjetaValidaMensaje"),
+	  primeraVista =document.getElementById("primeraVista"),
+	  ingresar= document.getElementById("ingresarButton"),
+	  vistaTarjeta = document.getElementById("vistaTarjeta");
+
 
 	  formulario.addEventListener ("submit", ValidarTarjeta);
 	  formulario.addEventListener ("submit", consultaAprobada);
-	  formulario.style.display  = "none";
+	ingresar.addEventListener("click", segundaVista);
+	  formulario.style.display  = "block";
 
+ // * vista principal de bankmavi.
+
+	function segundaVista(){
+		vistaTarjeta.style.display = "block";
+		primeraVista.style.display = "none";
+		let usuario = getElementById("nombreUsuario");
+		nombreUsario.value = "";
+		let password = getElementById("passwordUsuario");
+		passwordUsuario.value = "";
+	  }
+
+	  
 // * Volteamos la tarjeta para mostrar el frente.
 const mostrarFrente = () => {
 	if(tarjeta.classList.contains('active')){
@@ -108,6 +126,7 @@ function ValidarTarjeta (event){
 	console.log("se esta ejecutando");
 	event.preventDefault();
 	const numeroTc = UsuarioTarjeta.value;
+	console.log("Entra al if de validator")
   if (validator.isValid(numeroTc) === true) {
 	  consultaAprobada();		
   } else {

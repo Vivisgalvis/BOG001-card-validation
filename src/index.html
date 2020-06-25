@@ -9,8 +9,25 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
+	<main>
+	<!-- Primera vista-->
+	<section id="primeraVista" class="primera-pagina">
+        <div class="option-container">
+          <div class="usario-container">
+			<label for="usario">Ingrese Usuario</label> 
+			<input type="text" id="usario" required="required" autocomplete="off">
+			<label for="password">Ingrese Password</label> 
+			<input type="text" id="password" required="required" maxlength="4" autocomplete="off"><br>
+        	<input type="button" class="buttonSelect" value="Ingresar" id="ingresarButton" />
+          </div>
+          </div>
+        <div class="information-box">
+          <h1>Recuerda que con Bank Mavi tienes tus datos estan seguros</h1>
+        </div>
+      </section>
+	  <section class="contenedor" id="vistaTarjeta">
 	<div class="contenedor">
-
+		
 		<!-- Tarjeta -->
 		<section class="tarjeta" id="tarjeta">
 			<div class="delantera">
@@ -97,7 +114,7 @@
         </div>
         </div>
 			<input id="btn-Enviar" value="Enviar" class="button" required="required" type="submit"/>
-			<button onclick="ValidarTarjeta ()"></button>
+			
 		</form>
 		<h1 id="tarjetaInvalida"></h1>
               </section>
@@ -107,6 +124,20 @@
         </div>
       </section>
 	</div>
+</section>
+</main>
+	<footer>
+		<div class="derechosReservados">
+			<div>
+			<img src="img/vigilado.png" alt="" />
+			<p class="derechos" >Bank Mavi todos los derechosReservados 2020 </p>
+			</div>
+		
+		  <div class="logoBanco">
+			<img src="img/logo4.jpg" alt="" />
+		  </div>
+		</div>
+	  </footer>
 	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 	<script src="index.js" type="module"></script>
 </body>
