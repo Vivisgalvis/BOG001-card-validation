@@ -1,7 +1,7 @@
 
 BANCO MAVI💳 
 <figure>
-<img width="500px" src="img/vistaPincipal.png">
+<img width="500px" src="src/img/vistaPincipal.png">
 <figcaption>Vista principal</figcaption>
 </figure>
 
