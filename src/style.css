@@ -57,12 +57,12 @@ border-radius: 60px;
 .primera-pagina{
 	width: 100%;
 	height: 850px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	background: url(img/FondoBanco.png);
-	background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url(img/FondoBanco.png);
+  background-size: cover;
 }
 
 .primera-pagina > div{

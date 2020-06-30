@@ -1,6 +1,9 @@
 
 BANCO MAVI💳 
-<img src =src/img/vista_3.png>
+<figure>
+<img width="500px" src="img/vistaPincipal.png">
+<figcaption>Vista principal</figcaption>
+</figure>
 
 ## Índice
 
@@ -13,6 +16,7 @@ BANCO MAVI💳
 ## 1. Descripción del proyecto
 
 Por medio de está aplicacíon deseamos darle facilidades de consultar su cupo, movimientos, etc a nuestros clientes sin necesidad de desplazarse a la sede mas cercana, si no desde la comodidad de su hogar, trabajo etc.
+
 
 ## 2. Investigación UX
 
@@ -30,6 +34,21 @@ Por medio de está aplicacíon deseamos darle facilidades de consultar su cupo, 
   4. Agregar un resumen del feedback recibido indicando las mejoras a realizar.
   5. Imagen del prototipo final.
 
+  <figure>
+<img width="500px" src="img/vista3.png">
+<figcaption>Vista principal</figcaption>
+</figure>
+
+<figure>
+<img width="500px" src="img/vista2.png">
+<figcaption>Vista principal</figcaption>
+</figure>
+
+<figure>
+<img width="500px" src="img/vista1.png">
+<figcaption>Vista principal</figcaption>
+</figure>
+
 ## 3. Objetivos de aprendizaje
 
 Trabajando en parejas aprenderán a construir una aplicación web que interactuará
@@ -41,42 +60,42 @@ Reflexiona y luego marca los objetivos que has llegado a **entender** y
 
 ### UX
 
-* [ ] Diseñar la aplicación pensando y entendiendo al usuario
-* [ ] Crear prototipos para obtener feedback e iterar
-* [ ] Aplicar los principios de diseño visual
+* [X] Diseñar la aplicación pensando y entendiendo al usuario
+* [X] Crear prototipos para obtener feedback e iterar
+* [X] Aplicar los principios de diseño visual
 
 ### HTML y CSS
 
-* [ ] Uso correcto de HTML semántico
-* [ ] Uso de selectores de CSS
-* [ ] Construir tu aplicación respetando el diseño realizado (maquetación).
+* [X] Uso correcto de HTML semántico
+* [X] Uso de selectores de CSS
+* [X] Construir tu aplicación respetando el diseño realizado (maquetación).
 
 ### DOM
 
-* [ ] Uso de selectores de nodos del DOM
-* [ ] Manejo de eventos del DOM
+* [X] Uso de selectores de nodos del DOM
+* [X] Manejo de eventos del DOM
 * [ ] Manipulación dinámica del DOM
 
 ### Javascript
 
 * [ ] Manipulación de strings
-* [ ] Uso de condicionales
-* [ ] Uso de bucles
-* [ ] Uso de funciones
+* [X] Uso de condicionales
+* [X] Uso de bucles
+* [X] Uso de funciones
 * [ ] Datos atómicos y estructurados
 * [ ] Utilizar ES Modules (`import` | `export`).
 
 ### Testing
 
-* [ ] [Testeo de tus funciones](https://jestjs.io/docs/es-ES/getting-started)
+* [ ] [Testeo de tus funciones]
 
 ### Git y GitHub
 
-* [ ] Comandos de git (`add` | `commit` | `pull` | `status` | `push`).
-* [ ] Manejo de repositorios de GitHub (`clone` | `fork` | `gh-pages`).
+* [X] Comandos de git (`add` | `commit` | `pull` | `status` | `push`).
+* [X] Manejo de repositorios de GitHub (`clone` | `fork` | `gh-pages`).
 
 ### Buenas prácticas de desarrollo
 
-* [ ] Organizar y dividir el código en módulos (Modularización).
-* [ ] Uso de identificadores descriptivos (Nomenclatura | Semántica).
-* [ ] Uso de linter para seguir buenas prácticas (ESLINT).
+* [X] Organizar y dividir el código en módulos (Modularización).
+* [X] Uso de identificadores descriptivos (Nomenclatura | Semántica).
+* [X] Uso de linter para seguir buenas prácticas (ESLINT).
