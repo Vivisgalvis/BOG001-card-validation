@@ -35,18 +35,18 @@ Por medio de está aplicacíon deseamos darle facilidades de consultar su cupo, 
   5. Imagen del prototipo final.
 
   <figure>
-<img width="500px" src="img/vista3.png">
-<figcaption>Vista principal</figcaption>
+<img width="500px" src="src/img/vista3_.png">
+<figcaption>Vista tarjeta</figcaption>
 </figure>
 
 <figure>
-<img width="500px" src="img/vista2.png">
-<figcaption>Vista principal</figcaption>
+<img width="500px" src="src/img/vista_2.png">
+<figcaption>Vista formulario</figcaption>
 </figure>
 
 <figure>
-<img width="500px" src="img/vista1.png">
-<figcaption>Vista principal</figcaption>
+<img width="500px" src="src/img/vista_1.png">
+<figcaption>Vista tarjeta trasera</figcaption>
 </figure>
 
 ## 3. Objetivos de aprendizaje

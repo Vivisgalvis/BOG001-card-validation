@@ -18,7 +18,6 @@ const tarjeta = document.querySelector('#tarjeta'),
 	  ingresar= document.getElementById("ingresarButton"),
 	  vistaTarjeta = document.getElementById("vistaTarjeta");
 
-
 	  formulario.addEventListener ("submit", ValidarTarjeta);
 	  formulario.addEventListener ("submit", consultaAprobada);
 	  formulario.style.display  = "none";
