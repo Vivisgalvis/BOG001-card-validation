@@ -27,8 +27,10 @@ const validator = {
     
     if ((suma % 10) === 0){ 
      alert("Número de tarjeta correcto ");
+     return true;
     } else {
      alert("El número de tarjeta no es válido ");
+     return false;
     }
    },
 

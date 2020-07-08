@@ -22,6 +22,7 @@ const tarjeta = document.querySelector('#tarjeta'),
 	  formulario.addEventListener ("submit", consultaAprobada);
 	  formulario.style.display  = "none";
 	  ingresar.addEventListener("click", segundaVista);
+	  vistaTarjeta.style.display = "none";
 
 	  // * vista principal de bankmavi.
 
