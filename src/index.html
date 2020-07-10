@@ -15,18 +15,18 @@
 		<div class="logo" id="logo"></div>
 		<img src="img/logo4.jpg" class="inicio" alt="">
 		
-	<nav>
-		<a href="#">Inicio</a>
-		<a href="#">Servicios</a>
-		<a href="#">Contáctenos</a>
-		<a href="#">Preguntas frecuentes</a>
-	</nav>
+		<nav>
+			<a href="#">Inicio</a>
+			<a href="#">Servicios</a>
+			<a href="#">Contáctenos</a>
+			<a href="#">Preguntas frecuentes</a>
+		</nav>
 	</header>
-	<main>
+<main>
 	<!-- Primera vista-->
 	<section id="primeraVista" class="primera-pagina">
 		
-        <div class="option-container">
+		<div class="option-container">
 			<br><br><br><br><br><br><br><br><br><br><br>
 			<div class="usario-container">
 				<label for="usario">Ingrese Usuario</label> 
@@ -39,104 +39,102 @@
         
     </section>
 	<section class="contenedor hidden" id="vistaTarjeta">
-	<div class="contenedor">
+		<div class="contenedor">
 		
-		<!-- Tarjeta -->
-		<section class="tarjeta" id="tarjeta">
-			<div class="delantera">
-				<div class="logo-marca" id="logo-marca">
+			<!-- Tarjeta -->
+			<section class="tarjeta" id="tarjeta">
+				<div class="delantera">
+					<div class="logo-marca" id="logo-marca">
 					<!-- <img src="img/logos/visa.png" alt=""> -->
-				</div>
-				<img src="img/chip-tarjeta.png" class="chip" alt="">
-				<div class="datos">
-					<div class="grupo" id="numero">
-						<p class="label">Número Tarjeta</p>
-						<p class="numero">#### #### #### ####</p>
 					</div>
-					<div class="flexbox">
-						<div class="grupo" id="nombre">
-							<p class="label">Nombre Tarjeta</p>
-							<p class="nombre">Carlos Perez</p>
+					<img src="img/chip-tarjeta.png" class="chip" alt="">
+					<div class="datos">
+						<div class="grupo" id="numero">
+							<p class="label">Número Tarjeta</p>
+							<p class="numero">#### #### #### ####</p>
 						</div>
+						<div class="flexbox">
+							<div class="grupo" id="nombre">
+								<p class="label">Nombre Tarjeta</p>
+								<p class="nombre">Carlos Perez</p>
+							</div>
 
-						<div class="grupo" id="expiracion">
-							<p class="label">Expiracion</p>
-							<p class="expiracion"><span class="mes">MM</span> / <span class="year">AA</span></p>
+							<div class="grupo" id="expiracion">
+								<p class="label">Expiracion</p>
+								<p class="expiracion"><span class="mes">MM</span> / <span class="year">AA</span></p>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
 
-			<div class="trasera">
-				<div class="barra-magnetica"></div>
-				<div class="datos">
-					<div class="grupo" id="firma">
-						<p class="label">Firma</p>
+				<div class="trasera">
+					<div class="barra-magnetica"></div>
+					<div class="datos">
+						<div class="grupo" id="firma">
+							<p class="label">Firma</p>
 						<div class="firma"><p></p></div>
+						</div>
+						<div class="grupo" id="ccv">
+							<p class="label">CCV</p>
+							<p class="ccv"></p>
+						</div>
 					</div>
-					<div class="grupo" id="ccv">
-						<p class="label">CCV</p>
-						<p class="ccv"></p>
-					</div>
+						<p class="leyenda">En caso de perdida o sustraccion notifique de inmediato a Bank MAVI y proceda
+						a su bloqueo empleando los medios habilitados para el efecto. Proteja su clave
+						y cambiela periodicamente</p>
+						<a href="#" class="link-banco">www.bankmavi.com.co</a>
 				</div>
-				<p class="leyenda">En caso de perdida o sustraccion notifique de inmediato a Bank MAVI y proceda
-					a su bloqueo empleando los medios habilitados para el efecto. Proteja su clave
-					y cambiela periodicamente</p>
-				<a href="#" class="link-banco">www.bankmavi.com.co</a>
-			</div>
-		</section>
+			</section>
 
-		<!-- Contenedor Boton Abrir Formulario -->
-		<div class="contenedor-btn">
-			<button class="btn-abrir-formulario" id="btn-abrir-formulario">
-				<i class="fas fa-plus"></i>
-			</button>
-		</div>
+				<!-- Contenedor Boton Abrir Formulario -->
+				<div class="contenedor-btn">
+					<button class="btn-abrir-formulario" id="btn-abrir-formulario">
+					<i class="fas fa-plus"></i>
+					</button>
+				</div>
 
-		<!-- Formulario -->
-		<form action="" id="formulario-tarjeta" class="formulario-tarjeta">
-			<div class="grupo">
-				<label for="inputNumero">Número Tarjeta</label>
-				<input type="text" id="inputNumero" required="required" maxlength="19" autocomplete="off">
-			</div>
-			<div class="grupo">
-				<label for="inputNombre">Nombre</label>
-				<input type="text" id="inputNombre" required="required" maxlength="19" autocomplete="off">
-			</div>
-			<div class="flexbox">
-				<div class="grupo expira">
-					<label for="selectMes">Expiracion</label>
+				<!-- Formulario -->
+				<form action="" id="formulario-tarjeta" class="formulario-tarjeta">
+					<div class="grupo">
+						<label for="inputNumero">Número Tarjeta</label>
+						<input type="text" id="inputNumero" required="required" maxlength="19" autocomplete="off">
+					</div>
+					<div class="grupo">
+						<label for="inputNombre">Nombre</label>
+						<input type="text" id="inputNombre" required="required" maxlength="19" autocomplete="off">
+					</div>
 					<div class="flexbox">
-						<div class="grupo-select">
-							<select name="mes" id="selectMes">
-								<option disabled selected>Mes</option>
-							</select>
-							<i class="fas fa-angle-down"></i>
-						</div>
-						<div class="grupo-select">
-							<select name="year" id="selectYear">
-								<option disabled selected>Año</option>
-							</select>
-							<i class="fas fa-angle-down"></i>
+						<div class="grupo expira">
+							<label for="selectMes">Expiracion</label>
+						<div class="flexbox">
+							<div class="grupo-select">
+								<select name="mes" id="selectMes">
+									<option disabled selected>Mes</option>
+								</select>
+								<i class="fas fa-angle-down"></i>
+							</div>
+								<div class="grupo-select">
+								<select name="year" id="selectYear">
+									<option disabled selected>Año</option>
+								</select>
+								<i class="fas fa-angle-down"></i>
+								</div>
 						</div>
 					</div>
-				</div>
-				<div class="grupo ccv">
-					<label for="inputCCV">CCV</label>
-					<input type="text" id="inputCCV" maxlength="3">
-        </div>
-        </div>
-			<input id="btn-Enviar" value="Enviar" class="button" required="required" type="submit"/>
-			
-		</form>
-		<h1 id="tarjetaInvalida"></h1>
-              
-      <section id="tarjetaValida">
-        <div class="valid-container">
-        <h1 id="tarjetaValidaMensaje"></h1>
-        </div>
-      </section>
-	</div>
+					<div class="grupo ccv">
+						<label for="inputCCV">CCV</label>
+						<input type="text" id="inputCCV" maxlength="3">
+        			</div>
+        			</div>
+							<input id="btn-Enviar" value="Enviar" class="button" required="required" type="submit"/>
+				</form>
+			<h1 id="tarjetaInvalida"></h1>
+            	<section id="tarjetaValida">
+        		<div class="valid-container">
+        			<h1 id="tarjetaValidaMensaje"></h1>
+        		</div>
+      			</section>
+		</div>
 	</section>
 </main>
 	<div class="container-footer">

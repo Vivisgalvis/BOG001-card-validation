@@ -97,5 +97,11 @@ Reflexiona y luego marca los objetivos que has llegado a **entender** y
 ### Buenas prácticas de desarrollo
 
 * [X] Organizar y dividir el código en módulos (Modularización).
-* [X] Uso de identificadores descriptivos (Nomenclatura | Semántica).
+* [ ] Uso de identificadores descriptivos (Nomenclatura | Semántica).
 * [X] Uso de linter para seguir buenas prácticas (ESLINT).
+
+## 4. Temas por reforzar
+
+Siento que en el tema de los Test Unitarios no los pude realizar a cabalidad, puesto que lo intente varias veces y no se daban los resultados esperados.
+
+Me faltan reforzar algunos temas de Javascrip pero siento que avance bastante en este proyecto con dudas que me habian quedado en la trasmision.
