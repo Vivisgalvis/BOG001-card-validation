@@ -102,6 +102,6 @@ Reflexiona y luego marca los objetivos que has llegado a **entender** y
 
 ## 4. Temas por reforzar
 
-Siento que en el tema de los Test Unitarios no los pude realizar a cabalidad, puesto que lo intente varias veces y no se daban los resultados esperados.
+Siento que en el tema de los Test Unitarios no los pude realizar a cabalidad, puesto que lo intente varias veces y no se daban los resultados esperados y me senti muy confundida.
 
 Me faltan reforzar algunos temas de Javascrip pero siento que avance bastante en este proyecto con dudas que me habian quedado en la trasmision.
